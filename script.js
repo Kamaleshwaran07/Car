@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("dropdownMenumodel");
               function handleModelItemClick(code) {
                 console.log("Selected brand:", code);
-                // You can perform further actions with the selected brand here
+               
               }
               dropdownMenuModel.innerHTML = ""; // Clear previous model items
               modelData.modelos.forEach((model) => {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 displayModelName.className = "dropdown-item";
                 displayModelName.innerText = modelName;
 
-                // Attach click event listener to each model dropdown item
+                
                 displayModelName.addEventListener("click", function () {
                   handleModelItemClick(modelCode); // Pass the model data to the handler
                   const yearUrl = `https://parallelum.com.br/fipe/api/v1/carros/marcas/${code}/modelos/${modelCode}/anos/`;
@@ -76,9 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         document.getElementById("dropdownMenuYear");
                       function handleYearItemClick(code) {
                         console.log("Selected brand:", code);
-                        // You can perform further actions with the selected brand here
                       }
-                      dropdownMenuYear.innerHTML = ""; // Clear previous year items
+                      dropdownMenuYear.innerHTML = ""; 
                       yearData.forEach((year) => {
                         let dropdownItemYear = document.createElement("li");
                         let yearCode = year.codigo;
@@ -87,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         displayYear.className = "dropdown-item";
                         displayYear.innerText = yearName;
 
-                        // Attach click event listener to each year dropdown item
+                       
                         displayYear.addEventListener("click", function () {
                           handleYearItemClick(yearCode);
                           // Pass the year data to the handler
